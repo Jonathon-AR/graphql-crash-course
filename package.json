@@ -22,6 +22,6 @@
   "dependencies": {
     "@apollo/server": "^4.7.3",
     "graphql": "^16.6.0",
-    "@as-integrations/next": "^0.10.x"
+    "@as-integrations/next": "^0.10.1"
   }
 }
