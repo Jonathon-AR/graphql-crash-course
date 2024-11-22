@@ -1,5 +1,5 @@
 import { ApolloServer } from '@apollo/server'
-import { startStandaloneServer } from '@apollo/server/standalone'
+import { startServerAndCreateNextHandler } from '@as-integrations/next';
 
 // data
 import db from './_db.js'
@@ -82,9 +82,5 @@ const server = new ApolloServer({
   resolvers
 })
 
-export default async function handler(req, res) {
-  const { url } = await startStandaloneServer(server, {
-    listen: { port: 4000 }
-  })
-  res.status(200).send(`Server ready at ${url}`)
-}
+// Use a handler compatible with Vercel
+export default startServerAndCreateNextHandler(server);
