@@ -82,8 +82,9 @@ const server = new ApolloServer({
   resolvers
 })
 
-const { url } = await startStandaloneServer(server, {
-  listen: { port: 4000 }
-})
-
-console.log(`Server ready at: ${url}`)
+export default async function handler(req, res) {
+  const { url } = await startStandaloneServer(server, {
+    listen: { port: 4000 }
+  })
+  res.status(200).send(`Server ready at ${url}`)
+}
