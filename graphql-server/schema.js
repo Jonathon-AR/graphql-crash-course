@@ -21,6 +21,7 @@ export const typeDefs = `#graphql
 
   type Query {
     projects(page: Int, status: Priority, priority: ProjectStatus): [Project]
+    project(id: String!): Project 
   }
 
   type Mutation {
