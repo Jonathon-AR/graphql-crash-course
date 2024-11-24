@@ -1,42 +1,31 @@
 export const typeDefs = `#graphql
-  type Game {
+  enum ProjectStatus {
+    ACTIVE
+    COMPLETED
+    ON_HOLD
+  }
+
+  enum Priority {
+    HIGH
+    MEDIUM
+    LOW
+  }
+
+  type Project {
     id: ID!
     title: String!
-    platform: [String!]!
-    reviews: [Review!]
+    description: String
+    status: ProjectStatus
+    priority: Priority
   }
-  type Review {
-    id: ID!
-    rating: Int!
-    content: String!
-    author: Author!
-    game: Game!
-  }
-  type Author {
-    id: ID!
-    name: String!
-    verified: Boolean!
-    reviews: [Review!]
-  }
+
   type Query {
-    games: [Game]
-    game(id: ID!): Game
-    reviews: [Review]
-    review(id: ID!): Review
-    authors: [Author]
-    author(id: ID!): Author
+    projects(page: Int, status: Priority, priority: ProjectStatus): [Project]
   }
+
   type Mutation {
-    addGame(game: AddGameInput!): Game
-    deleteGame(id: ID!): [Game]
-    updateGame(id: ID!, edits: EditGameInput): Game
+    addProject(title: String!, description: String, status: String, priority: String): Project
+    changeProjectStatus(id: String!, status: String): Project
+    deleteProject(id: String!): Project
   }
-  input AddGameInput {
-    title: String!,
-    platform: [String!]!
-  }
-  input EditGameInput {
-    title: String,
-    platform: [String!]
-  }
-`
+`;

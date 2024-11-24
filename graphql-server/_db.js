@@ -1,25 +1,49 @@
-let games = [
-  {id: '1', title: 'Zelda, Tears of the Kingdom', platform: ['Switch']},
-  {id: '2', title: 'Final Fantasy 7 Remake', platform: ['PS5', 'Xbox']},
-  {id: '3', title: 'Elden Ring', platform: ['PS5', 'Xbox', 'PC']},
-  {id: '4', title: 'Mario Kart', platform: ['Switch']},
-  {id: '5', title: 'Pokemon Scarlet', platform: ['PS5', 'Xbox', 'PC']},
-]
+let projects = [
+  {
+    id: "1",
+    title: "Amuzing",
+    description: "Built with React Native, AWS Lambda, API Gateway, GoLang.",
+    status: "Completed",
+    priority: "High",
+  },
+  {
+    id: "2",
+    title: "LIMS",
+    description: "Built with Java, JavaFX, Android, and SQL.",
+    status: "Completed",
+    priority: "Medium",
+  },
+  {
+    id: "3",
+    title: "Sign2Text",
+    description:
+      "Sign Recognition using YoloV5 & YoloV7 to translate the Indian Sign Language to Text",
+    status: "Completed",
+    priority: "High",
+  },
+  {
+    id: "4",
+    title: "Portfolio v1.0",
+    description:
+      "Made using React.js & Bootstrap for FrontEnd, deployed using Netlify & Firebase for backend",
+    status: "Completed",
+    priority: "Medium",
+  },
+  {
+    id: "5",
+    title: "Heart Disease Predication",
+    description: "Machine Learning using Python, Django and SQLite",
+    status: "Completed",
+    priority: "High",
+  },
+  {
+    id: "6",
+    title: "Project Manager",
+    description:
+      "Made using React.js & TailwindCSS implementing react-query on the FrontEnd and a graphql server deployed on vercel",
+    status: "OnGoing",
+    priority: "Medium",
+  },
+];
 
-let authors = [
-  {id: '1', name: 'mario', verified: true},
-  {id: '2', name: 'yoshi', verified: false},
-  {id: '3', name: 'peach', verified: true},
-]
-
-let reviews = [
-  {id: '1', rating: 9, content: 'lorem ipsum', author_id: '1', game_id: '2'},
-  {id: '2', rating: 10, content: 'lorem ipsum', author_id: '2', game_id: '1'},
-  {id: '3', rating: 7, content: 'lorem ipsum', author_id: '3', game_id: '3'},
-  {id: '4', rating: 5, content: 'lorem ipsum', author_id: '2', game_id: '4'},
-  {id: '5', rating: 8, content: 'lorem ipsum', author_id: '2', game_id: '5'},
-  {id: '6', rating: 7, content: 'lorem ipsum', author_id: '1', game_id: '2'},
-  {id: '7', rating: 10, content: 'lorem ipsum', author_id: '3', game_id: '1'},
-]
-
-export default { games, authors, reviews }
+export default { projects };
