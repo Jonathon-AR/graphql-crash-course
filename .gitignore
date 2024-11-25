@@ -2,6 +2,5 @@
 /graphql-server/node_modules
 /graphql-server/package-lock.json
 /frontend/node_modules
-# production
 /frontend/build
 /frontend/package-lock.json
