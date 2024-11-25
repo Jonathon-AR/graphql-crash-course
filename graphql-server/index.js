@@ -24,8 +24,8 @@ const resolvers = {
       db.projects.push(project);
       return project;
     },
-    deleteProject(_, args) {
-      db.projects = db.projects.filter((g) => g.id !== args.id);
+    deleteProject(_, {id}) {
+      db.projects = db.projects.filter((g) => g.id !== id);
       return db.projects;
     },
     changeProjectStatus(_, args) {
