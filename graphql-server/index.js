@@ -35,7 +35,7 @@ const resolvers = {
         }
         return g;
       });
-      return db.projects.find((g) => g.id === args.id);
+      return db.projects;
     },
   },
 };
