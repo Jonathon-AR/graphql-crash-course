@@ -4,7 +4,7 @@ export const typeDefs = `#graphql
     title: String!
     description: String
     status: String
-    priority: Strings
+    priority: String
   }
 
   type Query {
