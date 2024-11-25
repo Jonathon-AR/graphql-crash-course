@@ -22,7 +22,7 @@ const resolvers = {
         priority,
       };
       db.projects.push(project);
-      return project;
+      return db.projects;
     },
     deleteProject(_, {id}) {
       db.projects = db.projects.filter((g) => g.id !== id);
