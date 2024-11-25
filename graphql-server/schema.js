@@ -13,8 +13,8 @@ export const typeDefs = `#graphql
   }
 
   type Mutation {
-    addProject(title: String!, description: String, status: String, priority: String): Project
-    changeProjectStatus(id: String!, status: String): Project
-    deleteProject(id: String!): Project
+    addProject(title: String!, description: String, status: String, priority: String): [Project]
+    changeProjectStatus(id: String!, status: String): [Project]
+    deleteProject(id: String!): [Project]
   }
 `;
