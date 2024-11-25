@@ -1,26 +1,14 @@
 export const typeDefs = `#graphql
-  enum ProjectStatus {
-    ACTIVE
-    COMPLETED
-    ON_HOLD
-  }
-
-  enum Priority {
-    HIGH
-    MEDIUM
-    LOW
-  }
-
   type Project {
     id: ID!
     title: String!
     description: String
-    status: ProjectStatus
-    priority: Priority
+    status: String
+    priority: Strings
   }
 
   type Query {
-    projects(page: Int, status: Priority, priority: ProjectStatus): [Project]
+    projects(page: Int, status: String, priority: String): [Project]
     project(id: String!): Project 
   }
 
